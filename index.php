@@ -5,6 +5,7 @@
 <h3>(Work from home employee )</h3></center>
 <br><br><center>
 <a href="login.php"><h2><font color="red">login here!!</font></h2></a>
+<a href="register.php"><h2><font color="red">register here!!</font></h2></a>
 <center>
 
 </body>

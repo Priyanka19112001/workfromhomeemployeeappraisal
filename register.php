@@ -10,19 +10,23 @@
   }
 ?>
 <html>
-<body background="2.png">
+<body >
 <br>
-<center><h1>Login</h1></center>
+<center><h1>Registeration Form</h1>
+<h3>(Work from home Employee performance Appraisal Scale)</h3>
+</center>
+
 <br>
 
 <form>
 <table align="center"  bgcolor="#f2f2f2">
-<tr><td>Name</td><td> : </td><td><input type="text"  name="r"></td></tr>
-<tr><td>email</td><td> :</td><td> <input type="email" name="n"></td></tr>
-<tr><td>password</td><td> :</td><td><input type="password"  name="a"></td></tr>
-<tr><td>confirm password</td><td> :</td> <td><input type="password"  name="m"></td></tr>
+<tr><td>Employee Name</td><td> : </td><td><input type="text"  placeholder="Enter your name" name="r"></td></tr><br>
+<tr><td> Employee ID </td><td> :</td><td> <input type="text"  placeholder="Enter your ID" name="n"></td></tr><br>
+<tr><td>Phone</td><td> :</td><td><input type="text"  placeholder="Enter your phone number" name="a"></td></tr><br>
+<tr><td>Department</td><td> :</td> <td><input type="text" placeholder="Enter your department" name="m"></td></tr>
 </table><br><br>
-<center><input type="submit" value="login" name="i">
+<center><input type="submit" value="register" name="i">
+
 <center>
 </form>
 <?php
@@ -32,7 +36,7 @@ if (isset($_GET["i"]))
   $n=$_GET["n"];
   $a=$_GET["a"];
   $m=$_GET["m"];
-  $sql="insert into emp values('$r','$n','$a','$m')";
+  $sql="insert into reg values('$r','$n','$a','$m')";
   $result=mysqli_query($con,$sql);
   if($result)
   {
@@ -46,7 +50,7 @@ else if (isset($_GET["s"]))
   $result=mysqli_query($con,$sql);
    $count=mysqli_num_rows($result);
    echo "<table border='1'>";
- echo "<tr><th>Roll No</th><th>Name</th><th>Age</th><th>Marks</th></tr>";
+ 
    
      while($row=mysqli_fetch_array($result))
      {
